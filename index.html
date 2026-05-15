@@ -35,7 +35,10 @@
   .top-nav .brand {
     font-weight: 900; font-size: 15px; color: var(--cream);
     margin-right: 20px; white-space: nowrap;
+    cursor: pointer; text-decoration: none;
+    transition: opacity 0.2s;
   }
+  .top-nav .brand:hover { opacity: 0.85; }
   .top-nav .brand .accent { color: var(--mustard); }
   .top-nav nav {
     display: flex; gap: 4px; flex: 1; overflow-x: auto;
@@ -189,7 +192,7 @@
 
 <!-- Nav -->
 <header class="top-nav" id="top">
-  <div class="brand">미니 <span class="accent">과학 부스전</span></div>
+  <a href="#top" class="brand" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});">미니 <span class="accent">과학 부스전</span></a>
   <nav id="mainNav">
     <a href="#hero">행사 안내</a>
     <a href="#booths-top">부스 소개</a>
